@@ -2,12 +2,12 @@
 import webapp2
 import jinja2
 import os
-import cgi
+
 # We import the ndb
 from google.appengine.ext import ndb
 
 # This code initializes a Jinja environment
-# Autoescape = True "escapes" any html character by default, but we will use cgi.escape instead
+# Autoescape = True "escapes" any html character by default
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape = False)
 
@@ -79,7 +79,7 @@ class Stages(Handler):
 		# we programm defensively, so no user can introduce junk in the server
 		# using the query parameters. If a user does this, he will be directed to
 		# the main page
-		stage = cgi.escape(self.request.get('Stage'))
+		stage = self.request.get('Stage')
 		valid_stages = ["Stage 0", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"]
 		if stage in valid_stages:
 			concept_query = Concept.query( Concept.stage == stage).order(Concept.date)
@@ -107,13 +107,12 @@ class Input_Comments(Handler):
 		# will be displayed
 		error_message = ''
 		# We instantiate a concept using the 4 variables above
-		# We make sure we use cgi.escape() so any html code is escaped before
 		# we write it in the Datastore
 		if title and name and explanation:
-			comment = Comment(stage = cgi.escape(stage),
-				title = cgi.escape(title),
-				name = cgi.escape(name),
-				explanation = cgi.escape(explanation))
+			comment = Comment(stage = stage,
+				title = title,
+				name = name,
+				explanation = explanation)
 			# This code actually upload "comment" to the database
 			comment.put()
 			# This code will redirect us to the main page
