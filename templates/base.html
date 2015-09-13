@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Josep's Notes</title>
+		<link rel="stylesheet" href= "stylesheets/styleStage1.css">
+	</head>
+	<body>
+		<h1>Josep's Notes</h1>
+		<hr>
+		<br>
+		<!-- The following form contains a list of buttons that
+		allow us to select the Stage we want to display -->
+		<form action = '/Notes'>
+			<button name = "Stage" class = "selection_button" value = "Stage 0">Stage 0</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 1">Stage 1</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 2">Stage 2</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 3">Stage 3</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 4">Stage 4</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 5">Stage 5</button>
+		</form>
+		<h2><a href='/'>Return Home</a></h2>
+		<br>
+		<!-- This two lines are used to connect to other html files
+		any code in other files will be inserted between these two lines -->
+		{% block content %}
+		{% endblock %}
+		<br>
+		<hr>
+		<br>
+		<!-- The following form contains a list of buttons that
+		allow us to select the Stage we want to display -->
+		<form action = '/Notes'>
+			<button name = "Stage" class = "selection_button" value = "Stage 0">Stage 0</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 1">Stage 1</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 2">Stage 2</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 3">Stage 3</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 4">Stage 4</button>
+			<button name = "Stage" class = "selection_button" value = "Stage 5">Stage 5</button>
+		</form>
+		<h2><a href='/'>Return Home</a></h2>
+	</body>
+
+</html>
+
+<!-- Variables in: name, title, explanation, stage, error_message-->
+<!-- Query parameters out: "Stage" -->
+<!-- Post parameters out: None -->

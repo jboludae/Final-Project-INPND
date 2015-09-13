@@ -1,0 +1,40 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Josep's Notes</title>
+		<link rel="stylesheet" href= "stylesheets/styleStage1.css">
+	</head>
+	<body>
+		<h1>Error!</h1>
+		<hr>
+		<br>
+		<br>
+		<h2>You can introduce your comments here:</h2>
+		<form method = "post" action="/InputComments">
+			<input type = "hidden" name = "stage" value ='{{stage}}'>
+			<label>Your <b>name</b> (required):
+	<!-- This is a text input box to write your name. Default name is set to "Anonymous" -->
+				<input type="text" name = "name" size = "50" value='{{name}}'>
+			</label>
+			<br>
+			<label>The <b>title</b> of your comment (required):
+	<!-- This is a text input box to write your name. Default name is set to "Anonymous" -->
+				<input type="text" name = "title" size = "50" value ='{{title}}'>
+			</label>
+			<br>
+			<br>
+			Introduce the <b>comment</b> here (required):
+			<br>
+			<textarea name = "explanation" rows = "10" cols = "99">{{explanation}}</textarea>
+			<button><b>Add</b></button><br>
+		</form>
+			<span class = 'error_msg'>{{error_message}}</span>
+			<br>
+			<span class = 'error_msg'>Your comment will be introduced in {{stage}}!!</span>
+	</body>
+</html>
+
+<!-- Variables in: name, title, explanation, stage, error_message-->
+<!-- Query parameters out: none-->
+<!-- Post parameters out: stage, name, title, explanation -->

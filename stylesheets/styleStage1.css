@@ -1,0 +1,98 @@
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body{
+	font-family: Myriad Pro;
+	max-width: 850px;
+	margin:auto;
+}
+.lesson{
+	/*outline:1px solid;*/
+	padding:5px;
+	margin:5px;
+	color:#3F2860;
+}
+.concept{
+	/*outline:1px solid;
+	outline-color: red;*/
+	background-color:#3F2860;
+	padding:5px;
+	margin:5px;
+	border-radius: 10px;
+
+}
+.concepttitle{
+	/*outline:1px solid;
+	outline-color: blue;*/
+	font-weight: 600;
+	font-size:1.2em;
+	padding:5px;
+	border-radius: 6px;
+	text-align: center;
+	color:#FFFFFF;
+}
+.explanation{
+	padding:10px;
+	margin:2px;
+	border-radius: 6px;
+	color:#3F2860;
+	/*outline:1px solid;*/
+	background-color: #DECBF9;
+}
+.selection_button{
+	padding:15px;
+	font-size: 1.5em;
+	font-weight: 600;
+	border-radius: 5px;
+	border-color:#3F2860;
+	background-color: #DECBF9;
+	color:#3F2860
+}
+.error_msg{
+	font-size: 1.1em;
+	font-weight: 600;
+	color:red;
+}
+.comment_title{
+	font-weight: 600;
+	font-size: 1.1em;
+	color:#3F2860;
+}
+.comment_explanation{
+	color:#3F2860;
+}
+a.selection_button: hover{
+	font-size: 3em
+}
+img{
+	margin:auto;
+}
+table{
+	width:100%;
+	border: 1px solid black;
+}
+th{
+	text-align: left;
+	border: 1px solid black;
+	padding: 5px;
+}
+td{
+	border: 1px solid black;
+	padding: 5px;
+}
+.code{
+	font-family: Courier;
+	font-size: 0.8em;
+	color: black;
+	border:2px grey solid;
+	font-weight:300;
+	padding:1px;
+	vertical-align: middle;
+	border-radius:3px;
+	background-color: lightgrey;
+	margin:2px;
+}
