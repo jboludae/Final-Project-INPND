@@ -80,7 +80,7 @@ class Stages(Handler):
 		# using the query parameters. If a user does this, he will be directed to
 		# the main page
 		stage = self.request.get('Stage')
-		valid_stages = ["Stage 0", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"]
+		valid_stages = ["Stage 0", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5","Random Stuff"]
 		if stage in valid_stages:
 			concept_query = Concept.query( Concept.stage == stage).order(Concept.date)
 			concepts = concept_query.fetch()
@@ -116,7 +116,7 @@ class Input_Comments(Handler):
 			# This code actually upload "comment" to the database
 			comment.put()
 			# This code will redirect us to the main page
-			self.redirect('/')
+			self.redirect('/Notes?Stage='+stage)
 		else:
 			# If title, name or explanation are missing, we will be asked to resubmit
 			# the form. error.html will keep us in the /Input_Comments URL until we

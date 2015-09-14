@@ -2,70 +2,85 @@
 
 {% extends "base.html" %}
 {% block content %}
-<div class = 'lesson'>
-<h1>{{stage}}</h1>
-<!-- We now display all concepts included in the "concepts" variable -->
-	{% if concepts %}
-		{% for concept in concepts %}
-			<div class = "concept">
-				<div class = "concepttitle">{{concept.title}}</div>
-				<div class = "explanation">
-					{{concept.explanation}}
-				</div>
-			</div>
-		{% endfor %}
-	{% endif %}
-</div>
-	<hr>
-	<h2>Comments:</h2>
-<!-- We display all the comments storde in the "comments" variable -->
-	{% if comments %}
-		{% for comment in comments %}
-			<div class = "comment_title">
-				<p>{{comment.name}} wrote: {{comment.title}}</p>
-			</div>
-			<div class = "comment_explanation">
-				{{comment.explanation}}
-			</div>
-			<br>
-		{% endfor %}
-	{% endif %}
-	<hr>
-<!-- Following you find a "form" that allows the user to introduce comments -->
-	<h2>You can introduce your comments here:</h2>
-	<form method = "post" action="/InputComments">
-		<input type = "hidden" name = "stage" value ='{{stage}}'>
-		<label>Your <b>name</b> (required):
-<!-- This is a text input box to write your name. Default name is set to "Anonymous" -->
-			<input type="text" name = "name" size = "50" value='Anonymous'>
-		</label>
-		<br>
-		<label>The <b>title</b> of your comment (required):
-<!-- This is a text input box to write your name. Default name is set to "Anonymous" -->
-			<input type="text" name = "title" size = "50">
-		</label>
-		<br>
-		<br>
-		Introduce the <b>comment</b> here (required):
-		<br>
-		<textarea name = "explanation" rows = "10" cols = "99"></textarea>
-		<button><b>Add</b></button><br>
-	</form>
-	<hr>
-<!-- Now, a user can delete comments here selecting them by name -->
-	<h2>You can delete your comments here:</h2>
-	<br>
-	<form method = "post" action="/DeleteComments">
-		<input type="hidden" name = "stage" value = '{{stage}}'>
-		<label>Choose the title of the comments you want to delete:
-			<select name = "title">
-				{% for comment in comments %}
-					<option>{{comment.title}}</option>
+<div class="row">
+	<div class="col-md-2 left-bar">
+		<a href="/"><h3>Home</h3></a>
+		<a href="/Notes?Stage=Stage+1"><h3>Stage 1</h3></a>
+		<a href="/Notes?Stage=Stage+2"><h3>Stage 2</h3></a>
+		<a href="/Notes?Stage=Stage+3"><h3>Stage 3</h3></a>
+		<a href="/Notes?Stage=Stage+4"><h3>Stage 4</h3></a>
+		<a href="/Notes?Stage=Stage+5"><h3>Stage 5</h3></a>
+		<a href="/Notes?Stage=Random+Stuff"><h3>Random Stuff</h3></a>
+	</div>
+	<div class="col-md-10">
+		<div class = 'text-justify lesson'>
+			<h1 class="text-uppercase text-center faded">{{stage}}</h1>
+			<!-- We now display all concepts included in the "concepts" variable -->
+			{% if concepts %}
+				{% for concept in concepts %}
+						<h2>{{concept.title}}</h2>
+						<h4 class="explanation">{{concept.explanation}}</h4>
 				{% endfor %}
-			</select>
-		</label>
-		<button>Delete Comment</button>
-	</form>
+			{% endif %}
+		</div>
+			<hr>
+			<h1 class="text-uppercase text-center faded">Comments:</h1>
+		<!-- We display all the comments storde in the "comments" variable -->
+			{% if comments %}
+				{% for comment in comments %}
+					<h3>
+						<p>{{comment.name}} wrote: {{comment.title}}</p>
+					</h3>
+					<h4 class="explanation">
+						{{comment.explanation}}
+					</h4>
+					<br>
+				{% endfor %}
+			{% endif %}
+		<!-- Following you find a "form" that allows the user to introduce comments -->
+			<form method = "post" action="/InputComments">
+				<input type = "hidden" name = "stage" value ='{{stage}}'>
+				<label>Your <b>name</b> (required):
+		<!-- This is a text input box to write your name. Default name is set to "Anonymous" -->
+					<input type="text" name = "name" size = "50" value='Anonymous'>
+				</label>
+				<br>
+				<label>The <b>title</b> of your comment (required):
+		<!-- This is a text input box to write your name. Default name is set to "Anonymous" -->
+					<input type="text" name = "title" size = "50">
+				</label>
+				<br>
+				<br>
+				Introduce the <b>comment</b> here (required):
+				<br>
+				<textarea name = "explanation" rows = "10" cols = "99"></textarea>
+				<button><b>Add</b></button><br>
+			</form>
+			<hr>
+		<!-- Now, a user can delete comments here selecting them by name -->
+			<h2>You can delete your comments here:</h2>
+			<br>
+			<form method = "post" action="/DeleteComments">
+				<input type="hidden" name = "stage" value = '{{stage}}'>
+				<label>Choose the title of the comments you want to delete:
+					<select name = "title">
+						{% for comment in comments %}
+							<option>{{comment.title}}</option>
+						{% endfor %}
+					</select>
+				</label>
+				<button>Delete Comment</button>
+			</form>
+
+	</div>
+
+</div> <!--row-->
+
+
+
+
+
+
 {% endblock %}
 
 <!-- Variables in: concepts, comments, stage-->

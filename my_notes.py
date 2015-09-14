@@ -577,7 +577,39 @@ User-Agent: chrome - this is your browser, the server has to know what kind of m
 	<li>By passing in form inputs as variable values to jinja templates you can automatically generate html code</li>
 	<li>You use "for" loops in you templating language of choice in order to loop through iterables</li>
 </ul>
-''']]
+'''],
+['Stage 5',"Intro to HTML and CSS",
+'''
+<p>In CSS, if you use <span class="code">display: flex;</span> in a "parent" container, all its "child" elements will be displayed in one line of code.</p>
+<p>In general, when you are working on a design, you have to follow a CODE, TEST, REFINE process:</p>
+<ul>
+	<li>Look for "boxes" or different areas</li>
+	<li>Look for repeated style and semantic elements</li>
+	<li>Write html</li>
+	<li>Apply styles</li>
+	<li>Fix small things</li>
+</ul>
+<p><b>CSS frameworks</b> are pre-prepared software frameworks that are meant to allow for easier, more standards-compliant web design using CSS. Mos of these frameworks contain at least a grid model.</p>
+<p><b>Responsiveness</b> is the ability of websites to adapt to the size of different devices</p>
+<p>If you design a website using Bootstrap, it already includes some responsive features which provide a good place to start. If you need more customization, you can use media queries:</p>
+<div class="code">
+media only screen (max-width: 300px){<br>
+	p{<br>
+	background-color: blue;<br>
+	}<br>
+}
+</div>
+<p>The media query above, sets a blue background color whenever the screen width is smaller than 300px.</p>
+<p><b>Bootstrap</b> provides a nice grid system. Elements should all be in a .container class. Then, the page can have multiple .row classes that will span the whole width. These rows will contain differnt .col classes. Depending on the specific class, it will span through a fraction of the total width. Example: .col-md-9 will span through 9/12 of the total width.</p>
+<p>The <a href="http://getbootstrap.com/">Bootstrap</a> website is a very good resource for web development. There you can find very complete documentation and numerous examples of the different bootstrap features. Of special interest are the following sections within the CSS and Javascript tabs:</p>
+<ul>
+	<li>The <b>Grid</b> section provides and explanation of what elements you can use to design the layout of your website.</li>
+	<li>The <b>Typography</b> section contains some useful text features to control capitalization, text alignment, highlights and more</li>
+	<li>The <b>Images</b> section explains how to use bootstrap to add responsiveness to your image and change shapes.</li>
+	<li>The <b>Modal</b> section within the Javascript tab, explains how to introduce <em>modals</em> to your website. Modals can be used to display additional information within the page you are navigationg. Depending on the options you set, a new box will appear and the rest of the content will be shaded.</li>
+</ul>
+''']
+]
 
 
 

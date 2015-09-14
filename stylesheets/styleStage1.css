@@ -22,3 +22,25 @@ hr{
 .logo{
 	margin-top: 25px;
 }
+.left-bar{
+	border-right: solid 4px #BCBBBB;
+}
+.explanation{
+	line-height: 175%;
+}
+.code{
+	font-family: courier;
+	font-size: 16px;
+	color: black;
+	border-radius: 5px;
+	border:solid 1px #;
+	background-color: #BCBBBB;
+	padding:5px 10px 5px 15px;
+}
+.lesson{
+	padding: 25px;
+}
+.faded{
+	color: #F8981C;
+	font-weight: 700;
+}
