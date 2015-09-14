@@ -1,11 +1,33 @@
 
 {% extends "base.html" %}
 {% block content %}
-<div class= 'lesson'>
-	<h2>These are important lessons I have learnt in the IPND programm. </h2>
-	<h2>You can select the different stages through the buttons above... or below...</h2>
-	<h2>There are many things to improve in this website, but hope you enjoy it!!!</h2>
-</div>
+<div class="row">
+	<div class="col-md-4 text-center tile first-tile">
+		<a href="/Notes?Stage=Stage+1"><h3>Stage 1</h3></a>
+	</div>
+	<div class="col-md-4 text-center">
+		<img src="http://placehold.it/360x160" class="img-responsive"
+		href="/Notes?Stage=Stage+2">
+		<a href="/Notes?Stage=Stage+2"><h3>Stage 2</h3></a>
+	</div>
+	<div class="col-md-4 text-center">
+		<img src="http://placehold.it/360x160" class="img-responsive">
+		<a href="/Notes?Stage=Stage+3"><h3>Stage 3</h3></a>
+	</div>
+	<div class="col-md-4 text-center">
+		<img src="http://placehold.it/360x160" class="img-responsive">
+		<a href="/Notes?Stage=Stage+4"><h3>Stage 4</h3></a>
+	</div>
+	<div class="col-md-4 text-center">
+		<img src="http://placehold.it/360x160" class="img-responsive">
+		<a href="/Notes?Stage=Stage+5"><h3>Stage 5</h3></a>
+	</div>
+	<div class="col-md-4 text-center">
+		<img src="http://placehold.it/360x160" class="img-responsive">
+		<a href="/RandomStuff"><h3>Link to Random Stuff</h3></a>
+	</div>
+
+<div class="row">
 {% endblock %}
 
 <!-- Variables in: none-->

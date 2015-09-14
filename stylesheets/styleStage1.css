@@ -1,0 +1,25 @@
+body{
+	color: #747704;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+hr{
+	color: #BCBBBB;
+	border: none;
+	height: 4px;
+	background-color: #BCBBBB;
+}
+.super-title{
+	font-weight: 100;
+	font-size:46px;
+}
+.tile{
+	height: 200px;
+	background-size: cover;
+	border-radius: 12px;
+}
+
+.first-tile{
+	background-image: url("http://placehold.it/360x160");
+}

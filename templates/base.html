@@ -12,58 +12,29 @@
 		<link rel="stylesheet" href= "stylesheets/styleStage1.css">
 		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<input type="button" data-toggle="modal" data-target="#project1">test button</input>
 		<div class="container">
-			<h1>Josep's Notes</h1>
-			<hr>
-			<br>
-			<!-- The following form contains a list of buttons that
-			allow us to select the Stage we want to display -->
-			<a href="/Notes?Stage=Stage+1">Stage 1</a>
-			<a href="/Notes?Stage=Stage+2">Stage 2</a>
-			<a href="/Notes?Stage=Stage+3">Stage 3</a>
-			<a href="/Notes?Stage=Stage+4">Stage 4</a>
-			<a href="/Notes?Stage=Stage+5">Stage 5</a>
-			<h2><a href='/'>Return Home</a></h2>
-			<br>
+			<div class="row">
+				<div class="col-md-3">
+					<img src="http://placehold.it/100x100">
+				</div>
+				<div class="col-md-9 text-right text-uppercase">
+					<h1 class="super-title">Intro to Programming ND</h1>
+					<h3>Notes and more</h3>
+				</div>
+			</div> <!-- row -->
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div> <!-- row -->
 			<!-- This two lines are used to connect to other html files
 			any code in other files will be inserted between these two lines -->
 			{% block content %}
 			{% endblock %}
-			<br>
-			<hr>
-			<br>
-			<!-- The following form contains a list of buttons that
-			allow us to select the Stage we want to display -->
-			<form action = '/Notes'>
-				<button name = "Stage" class = "selection_button" value = "Stage 0">Stage 0</button>
-				<button name = "Stage" class = "selection_button" value = "Stage 1">Stage 1</button>
-				<button name = "Stage" class = "selection_button" value = "Stage 2">Stage 2</button>
-				<button name = "Stage" class = "selection_button" value = "Stage 3">Stage 3</button>
-				<button name = "Stage" class = "selection_button" value = "Stage 4">Stage 4</button>
-				<button name = "Stage" class = "selection_button" value = "Stage 5">Stage 5</button>
-			</form>
-			<h2><a href='/'>Return Home</a></h2>
 		</div> <!-- Container -->
-		<!-- Modal -->
-		<div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
-		      </div>
-		      <div class="modal-body">
-		        <img class="img-responsive" src="images/555.jpeg">
-		        This was my first project in this class. I learned a lot about HTML and CSS.
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
 	</body>
 
 </html>
