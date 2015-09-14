@@ -608,6 +608,41 @@ media only screen (max-width: 300px){<br>
 	<li>The <b>Images</b> section explains how to use bootstrap to add responsiveness to your image and change shapes.</li>
 	<li>The <b>Modal</b> section within the Javascript tab, explains how to introduce <em>modals</em> to your website. Modals can be used to display additional information within the page you are navigationg. Depending on the options you set, a new box will appear and the rest of the content will be shaded.</li>
 </ul>
+'''],
+['Stage 5',"Responsive Design Fundamentals",
+'''
+<p>The mobile internet market is booming. In fact, it already is the first device used for internet. It is then essential to ensure a good user experience in mobile devices.</p>
+<p>The way to think about responsive design is "mobile first". Instead of designing a full-blow website made for a desktop screen. Start small, design it for a small device. Then, make changes to adapt to bigger screens. That way:</p>
+<ul>
+	<li>You optimize your content by keeping it to the essentials.</li>
+	<li>>You optimize your code. Working this way, you do not include superfluous features.</li>
+	<li>You improve performance. This is a consecuence of the last two points.</li>
+</ul>
+<p>The Chrome development tools include simulators for smaller devices. Using simulators you can simulate your website on different devices and different browsers. This is not fully accurate, but is inexpensive and convenient.</p>
+<p>The <b>viewport</b> defines the area of the screen that the browser renders content to. Some important concepts to keep in mind are the following:</p>
+<ul>
+	<li>DIP (Device Independent Pixels): these try to match the real size of the screens. Similar screen sizes should have similar DIPs</li>
+	<li>Physical pixel: is the real number of pixels of the device.</li>
+	<li>Pixel Ratio: this is the ratio between the hardware pixels and the DIP. Note that pixels are measured in one dimension, normally accross the width of the device.</li>
+</ul>
+<p>It is essential to set up the viewport in the head section of your html:</p>
+<div class="code">
+&lt name=&quotviewport&quot content=&quotwidth=device-width, initial-scale=1&quot&gt
+</div>
+<p>This sets the content width to the device width and assigns a ratio between DIPs and CSS pixels of 1.</p>
+<p>For images, videos, etc. it is recommended to add a "catch-all" that limits the width of the elements to 100%. Using relative widths instead of absolute widths improves responsiveness.</p>
+<div class="code">
+img, embed, object, video{
+	max-width:100%;
+}
+</div>
+<p>For good experience with touchscreens, buttons should be 48px x 48px and have at least 40px between them.</p>
+<p><b>Media queries</b> allow you to apply different styles depending on the width. By adding <em>breakpoints</em> you can keep a good experience accross devices. When adding breakpoints, do not think about devices, think about how the content is displayed!</p>
+<p>To add media queries you have two reasonable options (there are more, but they compromise performance):</p>
+<ul>
+	<li>Use the media query to link a different css file for each width</li>
+	<li>Embbed the media query in the html document</li>
+</ul>
 ''']
 ]
 
