@@ -19,7 +19,6 @@ hr{
 	background-size: cover;
 	border-radius: 12px;
 }
-
-.first-tile{
-	background-image: url("http://placehold.it/360x160");
+.logo{
+	margin-top: 25px;
 }
