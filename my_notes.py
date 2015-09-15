@@ -643,6 +643,23 @@ img, embed, object, video{
 	<li>Use the media query to link a different css file for each width</li>
 	<li>Embbed the media query in the html document</li>
 </ul>
+<p>A good <b>grid</b> model is essential for good user experience. Use the following code in a "container" element, and elements will be displayed in a row:</p>
+<div class="code">
+display: flex;
+flex-wrap: wrap;
+</div>
+<p>The flex-wrap option allows elements to jump from one row to another when they do not fit in a single line.</p>
+<p>The <b>order</b> attribute allows you to change the order in which the elements are displayed</p>
+<p>There are mainly four types of responsive pattern:</p>
+<ul>
+	<li>Column drop: columns are simply stacked as the screen shrinks.</li>
+	<li>Mostly fluid: similar to column drop</li>
+	<li>Layout shifter: layout is changed more dramatically as screen width changes. Order is altered using the "order" attribute</li>
+	<li>Off-canvas: may require a little bit of JS. Not frequently used content is put off-screen and only showed when user hits a "hamgurguer button"(for example)</li>
+<ul>
+<p>These patterns can be used in combination, you do not have to stick with a specific pattern.</p>
+<p>Aside from layout, many other things can be optimized, including tables, images, and typography.</p>
+<p>Major breakpoints, include major changes to layout. For an excellent experience, you will need <b>minor breakpoints</b> that adjust font sizes, that hide content, etc. In general, 65 characters per line is ideal for the web (research outputs on ideal length range from 40 to 90 characters). Shorter lines are awkward, and longer lines may be painful for readers. A size of 16 px and 1.2 em is the minimum required.</p>
 ''']
 ]
 
