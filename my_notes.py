@@ -656,10 +656,17 @@ flex-wrap: wrap;
 	<li>Mostly fluid: similar to column drop</li>
 	<li>Layout shifter: layout is changed more dramatically as screen width changes. Order is altered using the "order" attribute</li>
 	<li>Off-canvas: may require a little bit of JS. Not frequently used content is put off-screen and only showed when user hits a "hamgurguer button"(for example)</li>
-<ul>
+</ul>
 <p>These patterns can be used in combination, you do not have to stick with a specific pattern.</p>
 <p>Aside from layout, many other things can be optimized, including tables, images, and typography.</p>
 <p>Major breakpoints, include major changes to layout. For an excellent experience, you will need <b>minor breakpoints</b> that adjust font sizes, that hide content, etc. In general, 65 characters per line is ideal for the web (research outputs on ideal length range from 40 to 90 characters). Shorter lines are awkward, and longer lines may be painful for readers. A size of 16 px and 1.2 em is the minimum required.</p>
+<p>The <a href="https://developers.google.com/web/fundamentals/media/index?hl=en">Google Web Fundamentals</a> website is a very good source to learn about responsive design. A good section is the <strong>images</strong> section. There you find tips for responsive images like the following:</p>
+<ul>
+	<li>Use relative sizes for images: <span div="code">max-width:100%;</span> is your friend</li>
+	<li><span div="code">srcset</span> allows the browser to choose the best image size, depending on the device on which it's shown</li>
+	<li>Use expandable product images: users want to know what they are buying</li>
+</ul>
+<p>In addition, this website contains many, many tips to ensure good user experience: how to place "calls to action", navigation tips, form entry, etc. etc.</p>
 ''']
 ]
 
