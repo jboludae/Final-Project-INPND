@@ -1,7 +1,13 @@
 body{
-	color: #747704;
+	color: rgb(29,72,77);
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
+}
+p{
+	font-size: 20px;
+}
+li{
+	font-size: 20px;
 }
 
 hr{
@@ -14,13 +20,15 @@ hr{
 	font-weight: 100;
 	font-size:46px;
 }
-.tile{
-	height: 200px;
-	background-size: cover;
-	border-radius: 12px;
+.img{
+	max-width: 100%
 }
 .logo{
 	margin-top: 25px;
+}
+a.{
+	font-weight: 700;
+	color: rgb(75,186,223)
 }
 .left-bar{
 	border-right: solid 4px #BCBBBB;
@@ -38,9 +46,97 @@ hr{
 	padding:5px 10px 5px 15px;
 }
 .lesson{
-	padding: 25px;
+	padding: 25px 50px 25px 50px;
 }
 .faded{
-	color: #F8981C;
+	color: rgb(75,186,223);
 	font-weight: 700;
+}
+.img{
+	margin:auto;
+}
+
+@media screen and (max-width: 370px){
+	.logo{
+		display: none;
+	}
+	.super-title{
+		font-size: 20px;
+	}
+	.sub-title{
+		font-size: 18px;
+	}
+
+}
+@media screen and (min-width:371px) and (max-width: 460px){
+	.logo{
+		display: none;
+	}
+	.super-title{
+		font-size: 24px;
+	}
+	.sub-title{
+		font-size: 18px;
+	}
+}
+@media screen and (min-width:461px) and (max-width: 560px){
+	.logo{
+		display: none;
+	}
+	.super-title{
+		font-size: 30px;
+	}
+	.sub-title{
+		font-size: 22px;
+	}
+}
+@media screen and (min-width:561px) and (max-width: 660px){
+	.logo{
+		display: none;
+	}
+	.super-title{
+		font-size: 36px;
+	}
+	.sub-title{
+		font-size: 24px;
+	}
+}
+@media screen and (min-width:661px) and (max-width: 767px){
+	.logo{
+		display: none;
+	}
+	.super-title{
+		font-size: 36px;
+	}
+	.sub-title{
+		font-size: 24px;
+	}
+}
+@media screen and (min-width:768px) and (max-width: 992px){
+	.logo{
+		display:none;
+	}
+	.super-title{
+		font-size: 44px;
+	}
+	.sub-title{
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 460px){
+	.lesson{
+	padding: 0px;
+	}
+	.p{
+		font-weight: 16px;
+	}
+}
+@media screen and (min-width: 461px) and (max-width:990px){
+	.lesson{
+	padding: 10px;
+	}
+	.p{
+		font-weight: 18px;
+	}
 }

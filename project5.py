@@ -80,7 +80,7 @@ class Stages(Handler):
 		# using the query parameters. If a user does this, he will be directed to
 		# the main page
 		stage = self.request.get('Stage')
-		valid_stages = ["Stage 0", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5","Random Stuff"]
+		valid_stages = ["Stage 0", "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"]
 		if stage in valid_stages:
 			concept_query = Concept.query( Concept.stage == stage).order(Concept.date)
 			concepts = concept_query.fetch()

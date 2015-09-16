@@ -19,7 +19,7 @@
 			{% if concepts %}
 				{% for concept in concepts %}
 						<h2>{{concept.title}}</h2>
-						<h4 class="explanation">{{concept.explanation}}</h4>
+						<p class="explanation">{{concept.explanation}}</p>
 				{% endfor %}
 			{% endif %}
 		</div>
@@ -40,18 +40,19 @@
 		<!-- Following you find a "form" that allows the user to introduce comments -->
 			<form method = "post" action="/InputComments">
 				<input type = "hidden" name = "stage" value ='{{stage}}'>
-				<label>Your <b>name</b> (required):
+				<label><p>Your <b>name</b> (required):</p>
 		<!-- This is a text input box to write your name. Default name is set to "Anonymous" -->
 					<input type="text" name = "name" size = "50" value='Anonymous'>
 				</label>
 				<br>
-				<label>The <b>title</b> of your comment (required):
+				<br>
+				<label><p><b>Title</b> of your comment (required):</p>
 		<!-- This is a text input box to write your name. Default name is set to "Anonymous" -->
 					<input type="text" name = "title" size = "50">
 				</label>
 				<br>
 				<br>
-				Introduce the <b>comment</b> here (required):
+				<p>Introduce the <b>comment</b> here (required):</p>
 				<br>
 				<textarea name = "explanation" rows = "10" cols = "99"></textarea>
 				<button><b>Add</b></button><br>
@@ -62,7 +63,7 @@
 			<br>
 			<form method = "post" action="/DeleteComments">
 				<input type="hidden" name = "stage" value = '{{stage}}'>
-				<label>Choose the title of the comments you want to delete:
+				<label><p>Choose the comment:</p>
 					<select name = "title">
 						{% for comment in comments %}
 							<option>{{comment.title}}</option>
@@ -70,6 +71,9 @@
 					</select>
 				</label>
 				<button>Delete Comment</button>
+				<br>
+				<br>
+				<br>
 			</form>
 
 	</div>
