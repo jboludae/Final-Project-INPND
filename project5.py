@@ -30,26 +30,6 @@ class Comment(ndb.Model):
 	explanation = ndb.StringProperty(indexed = False)
 	date = ndb.DateTimeProperty(auto_now_add = True)
 
-# This code automatically cleans the database and uploads my updated notes
-# It will be used each time I want to update my notes and then I will comment
-# it out. A script named my_notes.pyc are also include in the
-# project directory.
-
-# we clean de notes database
-concepts_query = Concept.query()
-concepts = concepts_query.fetch()
-for concept in concepts:
-	concept.key.delete()
-
-# and now we upload the notes
-import my_notes
-notes = my_notes.notes_list
-for note in notes:
-	concept = Concept(stage = note[0],
-		title = note[1],
-		explanation = note[2])
-	concept.put()
-
 # We now write a helper handler that will help to simplify our code:
 class Handler(webapp2.RequestHandler):
 	def write(self, *a, **ka):
